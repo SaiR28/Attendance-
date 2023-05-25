@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attendance Records</title>
+</head>
+<body>
+  <h1>Attendance Records</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Total Attendance</th>
+      <th>Total Days</th>
+      <th>Attendance Percentage</th>
+    </tr>
+    {% for row in attendance_data %}
+    <tr>
+      <td>{{ row[0] }}</td>
+      <td>{{ row[1] }}</td>
+      <td>{{ row[2] }}</td>
+      <td>{{ row[3] }}</td>
+      <td>{{ row[4] }}%</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
