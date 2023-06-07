@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance System - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .student-link {
+            text-decoration: none;
+            background-color: #f4f4f4;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .student-link:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attendance System</h1>
+    <ul>
+        {% for student in students %}
+            <li><a href="/attendance/{{ student }}" class="student-link">{{ student }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
